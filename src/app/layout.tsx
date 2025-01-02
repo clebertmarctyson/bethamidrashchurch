@@ -9,7 +9,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: data?.name,
+  title: `${data?.name} | ${data?.description}`,
   description: data?.description,
   icons: [
     {

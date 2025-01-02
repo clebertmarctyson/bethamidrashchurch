@@ -48,7 +48,7 @@ export default function Home() {
           </motion.p>
           <motion.a
             href="#about"
-            className="inline-block bg-secondary text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-secondary/10 transition-colors"
+            className="inline-block bg-secondary text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-900 hover:text-secondary transition-colors"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
