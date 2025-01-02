@@ -16,5 +16,6 @@ export const data = {
     "Community Outreach",
     "Prayer Groups",
     "Family Ministry",
+    "Music Ministry",
   ],
 };

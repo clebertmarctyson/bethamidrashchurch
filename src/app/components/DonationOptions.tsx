@@ -25,7 +25,7 @@ export const DonationOptions = () => {
         <Link
           key={option.name}
           href={option.url}
-          className="flex items-center space-x-2 text-gray-600 hover:text-indigo-500 transition-colors"
+          className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
           target="_blank"
           rel="noopener noreferrer"
         >

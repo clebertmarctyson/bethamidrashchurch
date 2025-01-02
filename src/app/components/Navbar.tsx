@@ -14,11 +14,11 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-md">
+    <nav className="fixed w-full z-50 bg-gray-900 backdrop-blur-sm shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold text-indigo-700">
+            <Link href="/">
               <Image
                 src={data?.logo}
                 alt={data?.name}
@@ -35,7 +35,7 @@ export const Navbar = () => {
                 <Link
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  className="text-gray-800 hover:text-indigo-700 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  className="text-white hover:text-secondary px-3 py-2 rounded-md text-sm font-medium transition-colors"
                 >
                   {item}
                 </Link>
@@ -45,7 +45,7 @@ export const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-800 hover:text-indigo-700 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-secondary focus:outline-none"
             >
               {isOpen ? (
                 <X className="h-6 w-6" />
@@ -68,7 +68,7 @@ export const Navbar = () => {
               <Link
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-gray-800 hover:text-indigo-700 block px-3 py-2 rounded-md text-base font-medium"
+                className="text-white hover:text-secondary block px-3 py-2 rounded-md text-base font-medium"
                 onClick={() => setIsOpen(false)}
               >
                 {item}
