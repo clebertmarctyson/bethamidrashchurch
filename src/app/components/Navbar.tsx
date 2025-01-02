@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 import { data } from "../data";
 
 import Link from "next/link";
+import Image from "next/image";
 
 const navItems = ["Home", "About", "Services", "Ministries", "Contact"];
 
@@ -18,7 +19,14 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="text-2xl font-bold text-indigo-700">
-              {data?.name}
+              <Image
+                src={data?.logo}
+                alt={data?.name}
+                width={40}
+                height={40}
+                className="rounded-full"
+                priority
+              />
             </Link>
           </div>
           <div className="hidden md:block">
@@ -57,14 +65,14 @@ export const Navbar = () => {
         >
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item}
                 href={`#${item.toLowerCase()}`}
                 className="text-gray-800 hover:text-indigo-700 block px-3 py-2 rounded-md text-base font-medium"
                 onClick={() => setIsOpen(false)}
               >
                 {item}
-              </a>
+              </Link>
             ))}
           </div>
         </motion.div>

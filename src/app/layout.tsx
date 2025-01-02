@@ -11,6 +11,12 @@ const poppins = Poppins({
 export const metadata = {
   title: data?.name,
   description: data?.description,
+  image: [
+    {
+      url: "/logo.svg",
+      alt: data?.name,
+    },
+  ],
 };
 
 export default function RootLayout({

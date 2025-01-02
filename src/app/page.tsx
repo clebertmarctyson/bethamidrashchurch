@@ -19,21 +19,12 @@ export default function Home() {
         className="relative h-screen flex items-center justify-center overflow-hidden"
       >
         <div className="absolute inset-0 z-0">
-          {/* <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="object-cover w-full h-full"
-          >
-            <source src="/church-video-background.mp4" type="video/mp4" />
-          </video> */}
           <Image
             src="/hero.jpg"
             alt="Church background"
-            layout="fill"
-            objectFit="cover"
-            className="bg-opacity-95"
+            fill
+            style={{ objectFit: "cover" }}
+            className="bg-opacity-95 object-cover w-full h-full"
           />
 
           <div className="absolute inset-0 bg-black opacity-50"></div>
