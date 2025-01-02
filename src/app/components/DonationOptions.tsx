@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const donationOptions = [
   { name: "Credit Card", icon: "/card.svg", url: "#donate-credit-card" },
@@ -21,7 +22,7 @@ export const DonationOptions = () => {
     <div className="flex flex-col space-y-2">
       <h3 className="text-lg font-semibold mb-2">Support Our Ministry</h3>
       {donationOptions.map((option) => (
-        <a
+        <Link
           key={option.name}
           href={option.url}
           className="flex items-center space-x-2 text-gray-600 hover:text-indigo-500 transition-colors"
@@ -35,7 +36,7 @@ export const DonationOptions = () => {
             height={24}
           />
           <span>{option.name}</span>
-        </a>
+        </Link>
       ))}
     </div>
   );

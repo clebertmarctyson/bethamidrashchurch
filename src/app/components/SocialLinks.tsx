@@ -1,5 +1,7 @@
 import { Facebook, Youtube, Instagram, Twitter } from "lucide-react";
 
+import Link from "next/link";
+
 const socialLinks = [
   {
     name: "Facebook",
@@ -27,7 +29,7 @@ export const SocialLinks = () => {
   return (
     <div className="flex space-x-4">
       {socialLinks.map((link) => (
-        <a
+        <Link
           key={link.name}
           href={link.url}
           target="_blank"
@@ -36,7 +38,7 @@ export const SocialLinks = () => {
           aria-label={`Follow us on ${link.name}`}
         >
           <link.icon className="w-6 h-6" />
-        </a>
+        </Link>
       ))}
     </div>
   );
